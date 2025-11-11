@@ -1,0 +1,38 @@
+package keypad;
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
+/**
+ * File: Test.java
+ * Author: Kate Bucher
+ * Created on: Oct 28, 2025
+ * Last Modified: Nov 11, 2025
+ * Description: Create a program that executes the
+ *  KeyPadPane and KeyPadCustomPane classes
+ *  https://github.com/kb39181-design/desktop-tutorial
+ */
+
+public class PAssign08 extends Application {
+	@Override
+	public void start(Stage primaryStage) {
+		GridPane pane = new GridPane();
+		pane.setAlignment(Pos.CENTER);
+		pane.setPadding(new Insets(11.5, 12.5, 13.5, 14.5));
+	    
+	    KeyPadCustomPane keyPane = new KeyPadCustomPane();
+	    pane.getChildren().add(keyPane);
+	    
+	    Scene scene = new Scene(pane);
+	    primaryStage.setTitle("Key Pad");
+	    primaryStage.setScene(scene);
+	    primaryStage.show();
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+}

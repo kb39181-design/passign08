@@ -1,0 +1,80 @@
+package keypad;
+
+import javafx.event.ActionEvent;
+
+/**
+ * File: KeyPadCustomPane.java
+ * Author: Kate Bucher
+ * Created on: Oct 28, 2025
+ * Last Modified: Nov 11, 2025
+ * Description: Create a program that extends the KeyPadPane
+ * https://github.com/kb39181-design/desktop-tutorial
+ */
+
+public class KeyPadCustomPane extends KeyPadPane {
+	KeyPadCustomPane() {
+		btn1.setText("        \n   1 ");
+		btn2.setText(" ABC \n   2");
+		btn3.setText(" DEF \n   3");
+		btn4.setText(" GHI \n   4");
+		btn5.setText(" JKL  \n   5");
+		btn6.setText("MNO\n   6");
+		btn7.setText(" PRS \n   7");
+		btn8.setText(" TUV \n   8");
+		btn9.setText(" WXY \n    9");
+		btnBlank1.setText("         \n    *");
+		btn0.setText("OPER\n    0");
+		btnBlank2.setText("         \n   #");
+	}
+	
+	@Override
+	protected void registerEventHandlers() {
+		btn1.setOnAction((ActionEvent ex) -> {
+			System.out.println("Button was clicked: 1");
+		});
+		
+		btn2.setOnAction((ActionEvent ex) -> {
+			System.out.println("Button was clicked: ABC 2");
+		});
+		
+		btn3.setOnAction((ActionEvent ex) -> {
+			System.out.println("Button was clicked: DEF 3");
+		});
+		
+		btn4.setOnAction((ActionEvent ex) -> {
+			System.out.println("Button was clicked: GHI 4");
+		});
+		
+		btn5.setOnAction((ActionEvent ex) -> {
+			System.out.println("Button was clicked: JKL 5");
+		});
+		
+		btn6.setOnAction((ActionEvent ex) -> {
+			System.out.println("Button was clicked: MNO 6");
+		});
+		
+		btn7.setOnAction((ActionEvent ex) -> {
+			System.out.println("Button was clicked: PRS 7");
+		});
+		
+		btn8.setOnAction((ActionEvent ex) -> {
+			System.out.println("Button was clicked: TUV 8");
+		});
+		
+		btn9.setOnAction((ActionEvent ex) -> {
+			System.out.println("Button was clicked: WXY 9");
+		});
+		
+		btnBlank1.setOnAction((ActionEvent ex) -> {
+			System.out.println("Button was clicked: *");
+		});
+		
+		btn0.setOnAction((ActionEvent ex) -> {
+			System.out.println("Button was clicked: OPER 0");
+		});
+		
+		btnBlank2.setOnAction((ActionEvent ex) -> {
+			System.out.println("Button was clicked: #");
+		});
+	}
+}
